@@ -1,0 +1,26 @@
+div{
+  padding: 0px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.users{
+  background-color: rgb(161, 221, 143);
+  height: 100vh;
+
+}
+
+.chat{
+  height: 75vh;
+  background-color: rgba(200, 107, 107, 0.56);
+
+}
+.input{
+  width: 100vw;
+  height:25vh;
+  text-align: center;
+  background-color: rgb(113, 210, 231);
+  display: table-cell;
+  vertical-align: middle;
+
+}
