@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActiveChatComponent } from './active-chat.component';
 import {MessageService } from '../../services/message.service';
-import { PostComponent } from '../../components/post/post.component'
+import { PostComponent } from '../../components/post/post.component';
 
 describe('ActiveChatComponent', () => {
   let component: ActiveChatComponent;
