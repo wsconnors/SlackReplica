@@ -17,4 +17,8 @@ export class User{
     return this.password;
   }
 
+  getProfile():Profile{
+    return this.profile;
+  }
+
 }
