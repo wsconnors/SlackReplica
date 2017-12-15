@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { MessageObj } from '../../style/message-obj'
+import { MessageObj } from '../../objects/message-obj'
 import { MessageService } from '../../services/message.service'
 
 @Component({
@@ -19,7 +19,7 @@ export class PostComponent implements OnInit {
   }
 
   editPost(newInput:string){
-    this.messageService.editMessageByMessageId(this.message.messageId,newInput);
+    this.messageService.editMessageByMessageId(this.message.getMessageId(),newInput);
     this.toggleEdit();
   }
 
@@ -28,7 +28,7 @@ export class PostComponent implements OnInit {
   }
 
   deleteMessage():void{
-    this.messageService.deleteMessageByMessageId(this.message.messageId);
+    this.messageService.deleteMessageByMessageId(this.message.getMessageId());
   }
 
 }

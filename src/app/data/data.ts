@@ -1,2 +1,2 @@
-import { MessageObj } from '../style/message-obj'
-export var MessageObjects:MessageObj[] = []
+import { MessageObj } from '../objects/message-obj'
+export var MessageObjects:MessageObj[] = [];
