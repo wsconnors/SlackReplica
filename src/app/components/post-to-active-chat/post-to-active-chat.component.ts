@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output, OnDestroy} from '@angular/core';
-import { MessageObj } from '../../style/message-obj'
 import { CreateMessageService } from '../../services/create-message.service'
 import { Subscription } from 'rxjs/Subscription'
+import { MessageObjects } from '../../data/data'
 
 @Component({
   selector: 'app-post-to-active-chat',
@@ -13,7 +13,7 @@ export class PostToActiveChatComponent {
 
   }
 
-  makePost(message:any):void{
+  makePost(message:any):void{ // HTMLDataElement
     this.createMessageService.addMessage(message.value);
     message.value = '';
   }
