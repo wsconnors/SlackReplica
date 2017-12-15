@@ -18,4 +18,9 @@ export class PostToActiveChatComponent {
     message.value = '';
   }
 
+ // bullshitMethod(){
+ //   console.log("I',m a bullshit method");
+ // }
+
+
 }
