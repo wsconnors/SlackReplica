@@ -2,6 +2,10 @@ import { Component, OnInit, EventEmitter, Output, OnDestroy} from '@angular/core
 import { CreateMessageService } from '../../services/create-message.service'
 import { Subscription } from 'rxjs/Subscription'
 import { MessageObjects } from '../../data/data'
+<<<<<<< HEAD
+=======
+//import {ActiveUsersService} from '../../services/active-user.service'
+>>>>>>> da7249b84edfc8e7cc17d054b789f88f0316eed8
 
 @Component({
   selector: 'app-post-to-active-chat',
