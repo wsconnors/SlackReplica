@@ -14,9 +14,9 @@ export class PostToActiveChatComponent {//implements OnInit {
   constructor(private createMessageService:CreateMessageService){
 
   }
+
   makePost(message:any):void{
     this.createMessageService.addMessage(message.value);
-     //= document.getElementById("chatBox").scrollHeight
     message.value = '';
   }
 

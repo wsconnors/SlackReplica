@@ -1,13 +1,6 @@
 <div>
   Chat<br>
-  <!-- <div *ngIf="message != undefined">
+  <div *ngFor= "let message of messages">
     <app-post [message] = message></app-post>
-    {{message.message}} <i><small>{{message.time}}</small></i>
-  </div> -->
-  <ul>
-    <li *ngFor= "let message of messages">
-      <app-post [message] = message></app-post>
-      <!-- {{message.message}} <i><small>{{message.time}}</small></i> -->
-    </li>
-  </ul>
+  </div>
 </div>

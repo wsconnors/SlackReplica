@@ -3,7 +3,9 @@ import { AppComponent } from './app.component';
 import { ActiveChatComponent } from './components/active-chat/active-chat.component';
 import { ActiveUsersComponent } from './components/active-users/active-users.component';
 import { PostToActiveChatComponent } from './components/post-to-active-chat/post-to-active-chat.component';
-import { MessageService} from "./services/message.service";
+import { MessageService} from './services/message.service';
+import { CreateMessageService} from './services/create-message.service';
+import { PostComponent } from './components/post/post.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -12,9 +14,11 @@ describe('AppComponent', () => {
         AppComponent,
         ActiveChatComponent,
         ActiveUsersComponent,
-        PostToActiveChatComponent
+        PostToActiveChatComponent,
+        PostComponent
       ],
-      providers:[ MessageService ],
+      providers:[ MessageService,
+      CreateMessageService ],
     }).compileComponents();
   }));
   it('should create the app', async(() => {

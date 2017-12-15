@@ -7,9 +7,15 @@ describe('CreateMessageService', () => {
     TestBed.configureTestingModule({
       providers: [CreateMessageService]
     });
+    const service = TestBed.get(CreateMessageService)
   });
 
-  it('should be created', inject([CreateMessageService], (service: CreateMessageService) => {
-    expect(service).toBeTruthy();
-  }));
+  it('should be created', () => {
+    expect(this.service).toBeTruthy();
+  });
+
+  it('should create a message object', () => {
+    expect(this.service.createMessageObj('hello').message).toEqual('hello');
+  });
+  
 });

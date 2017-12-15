@@ -21,9 +21,6 @@ describe('MessageService', () => {
     expect(service).toBeTruthy();
   });
 
-  // it('should create a message object', () => {
-  //   expect(service.createMessageObj('hello').message).toEqual('hello');
-  // });
   //
   // it('should add a message to the message service', () => {
   //
