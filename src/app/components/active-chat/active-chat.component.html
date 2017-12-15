@@ -1,3 +1,13 @@
-<p>
-  active-chat works!
-</p>
+<div>
+  Chat<br>
+  <!-- <div *ngIf="message != undefined">
+    <app-post [message] = message></app-post>
+    {{message.message}} <i><small>{{message.time}}</small></i>
+  </div> -->
+  <ul>
+    <li *ngFor= "let message of messages">
+      <app-post [message] = message></app-post>
+      <!-- {{message.message}} <i><small>{{message.time}}</small></i> -->
+    </li>
+  </ul>
+</div>

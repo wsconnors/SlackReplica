@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {MessageService } from '../../services/message.service';
 
 import { PostToActiveChatComponent } from './post-to-active-chat.component';
 
@@ -8,7 +9,8 @@ describe('PostToActiveChatComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostToActiveChatComponent ]
+      declarations: [ PostToActiveChatComponent ],
+      providers: [MessageService]
     })
     .compileComponents();
   }));

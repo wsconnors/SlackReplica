@@ -1,0 +1,12 @@
+<div class="post">
+  <div *ngIf="!edit">
+    {{message.message}}
+    <button (click)="toggleEdit()">Edit</button>
+  </div>
+
+  <div *ngIf="edit">
+    <input type="text" value={{message.message}} #input (keyup.enter)="editPost(input.value)">
+    <input type="button" (click)="editPost(input.value)" value="Save">
+    <button class="btn btn-danger" (click) = "deleteMessage()">Delete</button>
+  </div>
+</div>

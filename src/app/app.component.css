@@ -13,7 +13,7 @@ div{
 .chat{
   height: 75vh;
   background-color: rgba(200, 107, 107, 0.56);
-
+  overflow: auto;
 }
 .input{
   width: 100vw;

@@ -1,5 +1,5 @@
 
 
-<input type="text" class="textInput" placeholder="Message"  #input >
+<input type="text" class="textInput" placeholder="Message"  #input (keyup.enter) = "makePost(input)">
 
-<input type="button" class="btn btn-primary" (click)="createMessage(input)" value="Post">
+<input type="button" class="btn btn-primary" (click)="makePost(input)" value="Post">
