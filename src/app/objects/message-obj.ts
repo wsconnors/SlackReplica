@@ -4,6 +4,8 @@ export class MessageObj {
   private userId:number
   private time:Date
 
+
+
   constructor(input:string){
     this.message = input;
     this.messageId = MessageObj.generateId();
@@ -24,6 +26,11 @@ export class MessageObj {
   }
   getTime():Date{
     return this.time
+  }
+
+  // just for testing
+  setMessageId(id:number){
+    this.messageId = id;
   }
 
   private static generateId():number{
