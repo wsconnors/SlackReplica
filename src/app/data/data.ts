@@ -8,4 +8,6 @@ export var Users:User[] = [
   new User("ryan","password1"),
   new User("donald","password2"),
   new User("wes","password3")
-]
+];
+
+export var ActiveUser:User[] = [];

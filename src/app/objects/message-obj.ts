@@ -1,10 +1,6 @@
 export class MessageObj {
   private message:string;
-<<<<<<< HEAD
-  private messageId:string;
-=======
   private messageId:number;
->>>>>>> da7249b84edfc8e7cc17d054b789f88f0316eed8
   private userId:number
   private time:Date
 
