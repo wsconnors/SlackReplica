@@ -17,5 +17,5 @@ export class PostToActiveChatComponent {
     this.createMessageService.addMessage(message.value);
     message.value = '';
   }
-
+  
 }
