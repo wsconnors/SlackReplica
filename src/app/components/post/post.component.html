@@ -3,15 +3,15 @@
   <div *ngIf="!edit">
     {{message.message}}
     <div class="edit">
-      <input type="button" (click)="toggleEdit()" class="btn btn-success" value="Edit">
+      <input type="button" (click)="toggleEdit()" class="btn-edit" value="Edit">
     </div>
   </div>
 
   <div *ngIf="edit">
     <input type="text" value={{message.message}} #input (keyup.enter)="editPost(input.value)">
     <div class="edit">
-      <input type="button" class="btn btn-primary"  (click)="editPost(input.value)" value="Save">
-      <input type="button" class="btn btn-danger" (click) = "deleteMessage()" value="Delete">
+      <input type="button" class="btn-save"  (click)="editPost(input.value)" value="Save">
+      <input type="button" class="btn-delete" (click) = "deleteMessage()" value="Delete">
     </div>
   </div>
 </div>

@@ -1,10 +1,33 @@
 .post{
-  border-style: solid;
-  border-color: black;
-  border-radius: 10px;
-  height: 45px;
+ 
+  
+  color:rgb(40, 38, 38);;
+  overflow:hidden;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .edit{
   float: right;
+
+}
+
+.btn-edit{
+  background-color:rgb(35, 32, 72);
+  color: rgb(250, 248, 250);
+  height: 40px;
+  
+  border-color: rgb(121, 121, 242);
+}
+
+.btn-save{
+  background-color:rgb(35, 32, 72);
+  color:rgb(250, 248, 250);
+  border-color: rgb(121, 121, 242);
+}
+
+.btn-delete{
+  background-color: rgb(35, 32, 72);
+  color:rgb(250, 248, 250);
+  border-color: rgb(121, 121, 242);
 }

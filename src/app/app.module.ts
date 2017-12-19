@@ -9,7 +9,8 @@ import { PostToActiveChatComponent } from './components/post-to-active-chat/post
 import { PostComponent } from './components/post/post.component';
 import { MessageService } from './services/message.service'
 import { CreateMessageService } from './services/create-message.service'
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms'
     ActiveUsersComponent,
     PostToActiveChatComponent,
     PostComponent
+    
   ],
   imports: [
     FormsModule,
