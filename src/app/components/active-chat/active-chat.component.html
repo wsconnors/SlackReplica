@@ -1,6 +1,6 @@
 <div>
   Chat<br>
-  <div *ngFor= "let message of messageList">
+  <div *ngFor= "let message of messages|async">
     <app-post [message] = message></app-post>
   </div>
 </div>

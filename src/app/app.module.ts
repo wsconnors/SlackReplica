@@ -7,9 +7,10 @@ import { ActiveChatComponent } from './components/active-chat/active-chat.compon
 import { ActiveUsersComponent } from './components/active-users/active-users.component';
 import { PostToActiveChatComponent } from './components/post-to-active-chat/post-to-active-chat.component';
 import { PostComponent } from './components/post/post.component';
-import { MessageService } from './services/message.service'
-import { CreateMessageService } from './services/create-message.service'
-import { FormsModule } from '@angular/forms'
+import { MessageService } from './services/message.service';
+import { CreateMessageService } from './services/create-message.service';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms'
   ],
   imports: [
     FormsModule,
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [MessageService,CreateMessageService],
   bootstrap: [AppComponent]

@@ -14,6 +14,7 @@ export class PostToActiveChatComponent {
 
   makePost(message:HTMLDataElement):void{
     this.createMessageService.addMessage(message.value);
+    // MessageService.u
     message.value = '';
   }
 
