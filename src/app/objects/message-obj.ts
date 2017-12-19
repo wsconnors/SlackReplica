@@ -1,29 +1,36 @@
 export class MessageObj {
-  private message:string;
+  private messageBody:string;
   private messageId:number;
-  private userId:number
-  private time:Date
+  private userName:string
+  // private time:Date
+
+
 
   constructor(input:string){
-    this.message = input;
+    this.messageBody = input;
     this.messageId = MessageObj.generateId();
-    this.userId = 0; //Switch with more users
-    this.time = new Date();
+    this.userName = ""; //Switch with more users
+    // this.time = new Date();
   }
   setMessage(newMessage:string){
-    this.message = newMessage;
+    this.messageBody = newMessage;
   }
   getMessage():string{
-    return this.message;
+    return this.messageBody;
   }
   getMessageId():number{
     return this.messageId;
   }
-  getUserId():number{
-    return this.userId;
+  getUserId():string{
+    return this.userName;
   }
-  getTime():Date{
-    return this.time
+  // getTime():Date{
+  //   return this.time
+  // }
+
+  // just for testing
+  setMessageId(id:number){
+    this.messageId = id;
   }
 
   private static generateId():number{

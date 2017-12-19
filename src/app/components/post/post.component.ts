@@ -9,7 +9,7 @@ import { MessageService } from '../../services/message.service'
 })
 export class PostComponent implements OnInit {
 
-  @Input() message:MessageObj;
+  @Input() message:any;
   edit:boolean;
   constructor(private messageService:MessageService) {
     this.edit = false;
@@ -19,7 +19,9 @@ export class PostComponent implements OnInit {
   }
 
   editPost(newInput:string){
-    this.messageService.editMessageByMessageId(this.message.getMessageId(),newInput);
+    console.log(this.message)
+    this.message.messageBody = newInput
+    this.messageService.editMessageByMessageId(this.message);
     this.toggleEdit();
   }
 
@@ -28,7 +30,7 @@ export class PostComponent implements OnInit {
   }
 
   deleteMessage():void{
-    this.messageService.deleteMessageByMessageId(this.message.getMessageId());
+    this.messageService.deleteMessageByMessageId(this.message.messageId);
   }
 
 }

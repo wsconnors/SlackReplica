@@ -17,6 +17,7 @@ export class User{
     return this.password;
   }
 
+
   setUserName(name:string):void{
     this.userName = name;
   }
