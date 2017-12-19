@@ -1,6 +1,26 @@
-<div>
-  Chat<br>
-  <div *ngFor= "let message of messageList">
-    <app-post [message] = message></app-post>
-  </div>
+
+
+  <div class="general">
+    <p>
+  #general
+    </p>
+    </div>
+  
+<div class="img">
+  <!-- <img src="https://cdn2.hubspot.net/hubfs/2742707/SI-Images/home-universal/ZCW-logo-horizontal.svg"> -->
 </div>
+
+  <div *ngFor= "let message of messages">
+    <app-post class = "content" [message] = message></app-post>
+
+  </div>
+
+  
+
+
+
+
+
+
+
+
