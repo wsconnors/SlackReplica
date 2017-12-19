@@ -17,8 +17,13 @@ export class User{
     return this.password;
   }
 
-  getProfile():Profile{
-    return this.profile;
+
+  setUserName(name:string):void{
+    this.userName = name;
+  }
+
+  setPassWord(password:string):void{
+    this.password = password;
   }
 
 }

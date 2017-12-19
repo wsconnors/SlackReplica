@@ -24,7 +24,8 @@ export class ActiveChatComponent implements OnInit{
 
   updateMessages(){
     this.loading = true;
-    this.messageService.getMessages().debounceTime(400).distinctUntilChanged().subscribe(m=> this.messageList = m);
+    this.messages = this.messageService.getMessages();
+    // this.messageService.getMessages().debounceTime(400).distinctUntilChanged().subscribe(m=> this.messageList = m);
     // this.messageService.getMessages().subscribe(data => {
     //   this.messages = data;
     //   // console.log(data)

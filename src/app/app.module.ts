@@ -20,6 +20,7 @@ import { HttpModule } from '@angular/http';
     ActiveUsersComponent,
     PostToActiveChatComponent,
     PostComponent
+
   ],
   imports: [
     FormsModule,

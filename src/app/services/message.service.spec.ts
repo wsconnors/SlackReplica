@@ -31,10 +31,13 @@ describe('MessageService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should delete message by message Id',() =>{
-    service.deleteMessageByMessageId(0);
-    expect(service.editMessageByMessageId(0)).toBeFalsy();
-  })
+  it('should get message by messageId (message exist)', () =>{
+    expect(service.getMessageByMessageId(0).message).toEqual('hello');
+  });
+
+  it('should get message by messageId (message does not exist)', () =>{
+    expect(service.getMessageByMessageId(10)).toBeUndefined();
+  });
 
   it('should edit message by messageId (message does exist)', () => {
     service.editMessageByMessageId(0, 'goodbye');

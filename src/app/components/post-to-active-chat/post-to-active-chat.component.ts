@@ -19,38 +19,3 @@ export class PostToActiveChatComponent {
   }
 
 }
-//
-// message:MessageObj;
-// subscription:Subscription;
-  //
-  // constructor(private service:MessageService) {
-  // }
-  // ngOnInit() {
-  // }
-  //
-  // createMessage(message:any){
-  //   let messageObj:MessageObj = {
-  //     message:message.value,
-  //     messageId: this.generateId(),
-  //     userId: 0,
-  //     time: new Date()
-  //   }
-  //   message.value = "";
-  //   this.postMessage(messageObj);
-  // }
-  //
-  // postMessage(messageObj:MessageObj){
-  //   this.service.addMessage(messageObj);
-  //
-  //   // console.log(messageObj.time.getDate());
-  //   // console.log(messageObj.time.getMonth());
-  //   // console.log(messageObj.time.getFullYear());
-  //
-  //   //send to service
-  // }
-  //
-  // generateId():number{
-  //   return new Date().getTime();
-  // }
-//
-// }

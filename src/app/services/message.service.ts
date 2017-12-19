@@ -22,12 +22,12 @@ export class MessageService {
 
   deleteMessageByMessageId(messageId:number){
     console.log(messageId);
-    this.http.delete('http://localhost:8080/messages/'+messageId);
+    this.http.delete('http://localhost:8080/messages/{{messageId}}');
     //MessageObjects.splice(this.getMessageIndexByMessageId(messageId),1);
   }
 
   editMessageByMessageId(updatedMessage: any){
-    this.http.put('http://localhost:8080/messages/'+updatedMessage.messageId,JSON.parse(JSON.stringify(updatedMessage)));
+    this.http.put('http://localhost:8080/messages/'+updatedMessage.messageId,updatedMessage);
     // if (this.messageExists(messageId)){
     //   MessageObjects[this.getMessageIndexByMessageId(messageId)].setMessage(newMessage);
     //   return true;
@@ -54,50 +54,3 @@ export class MessageService {
     }
   }
 }
-
-
-//   messages: MessageObj[];
-//
-//   constructor() {
-//     this.messages = [];
-//   }
-//
-
-//
-
-//
-//   addMessage(message: MessageObj){
-//     this.messages.push(message);
-//     console.log("add message: "+message);
-//   }
-//
-
-//
-//   getMessagesbySpecificDay(year:number,month:number,date:number):MessageObj[]{
-//     let messagesOfDay:MessageObj[] = []
-//     for (let i = 0; i < this.messages.length; i++) {
-//       let currentMessage = this.messages[i]
-//       let currentMessageTime = currentMessage.time;
-//       if(currentMessageTime.getDate() == date && currentMessageTime.getMonth() == month-1 && currentMessageTime.getFullYear() == year){
-//         messagesOfDay.push(currentMessage)
-//       }
-//     }
-//     return messagesOfDay;
-//   }
-//
-
-//
-//   getMessagesByUserId(userId:number){
-//     let newMessageList:MessageObj[] = [];
-//     for (let i = 0; i < this.messages.length; i++) {
-//         if(this.messages[i].userId == userId){
-//           newMessageList.push(this.messages[i]);
-//         }
-//     }
-//     console.log(newMessageList)
-//     this.messages = newMessageList;
-//   }
-//
-
-//
-// }

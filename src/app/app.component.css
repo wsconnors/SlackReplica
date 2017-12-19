@@ -1,26 +1,23 @@
 div{
   padding: 0px;
-  border-radius: 10px;
   margin: auto;
 }
 
 .users{
-  background-color: rgb(161, 221, 143);
+  background-color: rgb(35, 32, 72);
   height: 100vh;
-
 }
 
 .chat{
-  height: 75vh;
-  background-color: rgba(200, 107, 107, 0.56);
+  height: 85vh;
+  background-color: rgb(211, 248, 255);
   overflow: auto;
 }
 .input{
   width: 100vw;
-  height:25vh;
+  height:15vh;
   text-align: center;
-  background-color: rgb(113, 210, 231);
+  background-color: rgb(11, 54, 84);
   display: table-cell;
   vertical-align: middle;
-
 }
