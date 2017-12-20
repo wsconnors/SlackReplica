@@ -8,7 +8,6 @@ import { ActiveUsersComponent } from './components/active-users/active-users.com
 import { PostToActiveChatComponent } from './components/post-to-active-chat/post-to-active-chat.component';
 import { PostComponent } from './components/post/post.component';
 import { MessageService } from './services/message.service';
-import { CreateMessageService } from './services/create-message.service';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -27,7 +26,7 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     HttpModule
   ],
-  providers: [MessageService,CreateMessageService],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output, OnDestroy} from '@angular/core';
-import { CreateMessageService } from '../../services/create-message.service';
+import { MessageService } from '../../services/message.service';
 import { Subscription } from 'rxjs/Subscription';
 import { MessageObjects } from '../../data/data';
 
@@ -9,11 +9,11 @@ import { MessageObjects } from '../../data/data';
   styleUrls: ['./post-to-active-chat.component.css']
 })
 export class PostToActiveChatComponent {
-  constructor(private createMessageService:CreateMessageService){
+  constructor(private messageService:MessageService){
   }
 
   makePost(message:HTMLDataElement):void{
-    this.createMessageService.addMessage(message.value);
+    this.messageService.addMessage(message.value);
     // MessageService.u
     message.value = '';
   }
