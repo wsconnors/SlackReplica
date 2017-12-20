@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   templateUrl: './message-display.html',
   styleUrls: ['./message-display.css']
 })
-export class MessageDisplatComponent implements OnInit{
+export class MessageDisplayComponent implements OnInit{
   private loading: boolean = false;
   private messages:Observable<any[]>
 

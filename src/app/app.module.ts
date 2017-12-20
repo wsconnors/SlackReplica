@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { MessageDisplatComponent } from './components/message-display/message-display';
+import { MessageDisplayComponent } from './components/message-display/message-display';
 import { ActiveUsersComponent } from './components/active-users/active-users.component';
 import { PostMessageComponent } from './components/post-message/post-message.component';
 import { MessageComponent } from './components/message/message.component';
@@ -15,7 +15,7 @@ import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
-    MessageDisplatComponent,
+    MessageDisplayComponent,
     ActiveUsersComponent,
     PostMessageComponent,
     MessageComponent
