@@ -29,7 +29,6 @@ export class PostComponent implements OnInit {
   }
 
   deleteMessage():void{
-    //console.log(this.message);
     this.messageService.deleteMessage(this.message);
   }
 

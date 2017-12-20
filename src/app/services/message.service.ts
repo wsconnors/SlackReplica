@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Subject } from 'rxjs/Subject';
 import { MessageObjects } from '../data/data'
 import { Http, Response } from '@angular/http';
+import { ActiveChatComponent } from '../components/active-chat/active-chat.component'
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -14,7 +15,6 @@ export class MessageService {
   addMessage(message:string){
     let newMessage:MessageObj = new MessageObj(message);
     this.http.post('http://localhost:8080/messages',newMessage).subscribe(res => console.log(res));//.map((res: Response) => res.json());
-    // MessageObjects.push(newMessage);
   }
 
   getMessages(): Observable<MessageObj[]>{
