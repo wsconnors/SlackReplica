@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { ActiveChatComponent } from './components/active-chat/active-chat.component';
+import { MessageDisplatComponent } from './components/message-display/message-display';
 import { ActiveUsersComponent } from './components/active-users/active-users.component';
-import { PostToActiveChatComponent } from './components/post-to-active-chat/post-to-active-chat.component';
-import { PostComponent } from './components/post/post.component';
+import { PostMessageComponent } from './components/post-message/post-message.component';
+import { MessageComponent } from './components/message/message.component';
 import { MessageService } from './services/message.service';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -15,11 +15,10 @@ import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
-    ActiveChatComponent,
+    MessageDisplatComponent,
     ActiveUsersComponent,
-    PostToActiveChatComponent,
-    PostComponent
-
+    PostMessageComponent,
+    MessageComponent
   ],
   imports: [
     FormsModule,

@@ -4,10 +4,10 @@ import { MessageService } from '../../services/message.service'
 
 @Component({
   selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  templateUrl: './message.component.html',
+  styleUrls: ['./message.component.css']
 })
-export class PostComponent implements OnInit {
+export class MessageComponent implements OnInit {
 
   @Input() message:any;
   edit:boolean;

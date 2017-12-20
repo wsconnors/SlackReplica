@@ -4,11 +4,11 @@ import { Subscription } from 'rxjs/Subscription';
 import { MessageObjects } from '../../data/data';
 
 @Component({
-  selector: 'app-post-to-active-chat',
-  templateUrl: './post-to-active-chat.component.html',
-  styleUrls: ['./post-to-active-chat.component.css']
+  selector: 'app-post-message',
+  templateUrl: './post-message.component.html',
+  styleUrls: ['./post-message.component.css']
 })
-export class PostToActiveChatComponent {
+export class PostMessageComponent {
   constructor(private messageService:MessageService){
   }
 

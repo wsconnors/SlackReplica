@@ -1,23 +1,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ActiveChatComponent } from './active-chat.component';
+import { MessageDisplatComponent } from './message-display';
 import {MessageService } from '../../services/message.service';
-import { PostComponent } from '../../components/post/post.component';
+import { MessageComponent } from '../message/message.component';
 
-describe('ActiveChatComponent', () => {
-  let component: ActiveChatComponent;
-  let fixture: ComponentFixture<ActiveChatComponent>;
+describe('MessageDisplatComponent', () => {
+  let component: MessageDisplatComponent;
+  let fixture: ComponentFixture<MessageDisplatComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActiveChatComponent, PostComponent ],
+      declarations: [ MessageDisplatComponent, MessageComponent ],
       providers:[ MessageService ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ActiveChatComponent);
+    fixture = TestBed.createComponent(MessageDisplatComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
