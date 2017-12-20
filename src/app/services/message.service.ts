@@ -11,28 +11,34 @@ export class MessageService {
 
   constructor(private http: Http){}
 
+  addMessage(message:string){
+    let newMessage:MessageObj = new MessageObj(message);
+    this.http.post('http://localhost:8080/messages',newMessage).subscribe(res => console.log(res));//.map((res: Response) => res.json());
+    // MessageObjects.push(newMessage);
+  }
+
   getMessages(): Observable<MessageObj[]>{
-    // return Observable.of(MessageObjects(this.http));
     return this.http.get('http://localhost:8080/messages').map(arr =>{
+      console.log(arr.json())
       return arr.json().map( message => {
-        return new MessageObj(message.messageBody);
+        return {
+          messageId: message.messageId,
+          messageContent: message.messageContent,
+          timeStamp: message.time,
+          fromUser:message.fromUser,
+          chatId:message.chatId
+        };
       });
     });
   }
 
-  deleteMessageByMessageId(messageId:number){
-    console.log(messageId);
-    this.http.delete('http://localhost:8080/messages/{{messageId}}');
-    //MessageObjects.splice(this.getMessageIndexByMessageId(messageId),1);
+  deleteMessage(message:any){
+    console.log(message);
+    this.http.delete('http://localhost:8080/messages/'+message.messageId).subscribe();
   }
 
   editMessageByMessageId(updatedMessage: any){
-    this.http.put('http://localhost:8080/messages/'+updatedMessage.messageId,updatedMessage);
-    // if (this.messageExists(messageId)){
-    //   MessageObjects[this.getMessageIndexByMessageId(messageId)].setMessage(newMessage);
-    //   return true;
-    // }
-    // return false;
+    this.http.put('http://localhost:8080/messages/'+updatedMessage.messageId,updatedMessage).subscribe();
   }
 
   private getMessageByMessageId(messageId:number):MessageObj{

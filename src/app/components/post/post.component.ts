@@ -19,8 +19,7 @@ export class PostComponent implements OnInit {
   }
 
   editPost(newInput:string){
-    console.log(this.message)
-    this.message.messageBody = newInput
+    this.message.messageContent = newInput
     this.messageService.editMessageByMessageId(this.message);
     this.toggleEdit();
   }
@@ -30,7 +29,8 @@ export class PostComponent implements OnInit {
   }
 
   deleteMessage():void{
-    this.messageService.deleteMessageByMessageId(this.message.messageId);
+    //console.log(this.message);
+    this.messageService.deleteMessage(this.message);
   }
 
 }
