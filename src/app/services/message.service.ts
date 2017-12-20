@@ -14,7 +14,7 @@ export class MessageService {
 
   addMessage(message:string){
     let newMessage:MessageObj = new MessageObj(message);
-    this.http.post('http://localhost:8080/messages',newMessage).subscribe(res => console.log(res));//.map((res: Response) => res.json());
+    this.http.post('http://localhost:8080/messages',newMessage).subscribe(res => console.log(res));
   }
 
   getMessages(): Observable<MessageObj[]>{
@@ -41,22 +41,4 @@ export class MessageService {
     this.http.put('http://localhost:8080/messages/'+updatedMessage.messageId,updatedMessage).subscribe();
   }
 
-  private getMessageByMessageId(messageId:number):MessageObj{
-    return MessageObjects[this.getMessageIndexByMessageId(messageId)];
-  }
-
-  private messageExists(messageId: number): boolean{
-    if(this.getMessageByMessageId(messageId) != undefined){
-      return true;
-    }
-    return false;
-  }
-
-  private getMessageIndexByMessageId(messageId:number):number{
-    for (let i = 0; i < MessageObjects.length; i++) {
-      if(MessageObjects[i].getMessageId()== messageId){
-        return i;
-      }
-    }
-  }
 }

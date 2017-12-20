@@ -13,7 +13,7 @@ export class ActiveChatComponent implements OnInit{
   private loading:boolean = false;
   private messages:Observable<MessageObj[]>
 
-  messageList:MessageObj[];
+  // messageList:MessageObj[];
 
   constructor(private messageService:MessageService){
   }
