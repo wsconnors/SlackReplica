@@ -9,18 +9,15 @@ import { MessageService } from '../../services/message.service'
 })
 export class MessageComponent implements OnInit {
 
-  @Input() message:any;
+  @Input() message:MessageObj;
   edit:boolean;
   constructor(private messageService:MessageService) {
     this.edit = false;
   }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   editPost(newInput:string){
-    this.message.messageContent = newInput
-    this.messageService.editMessageByMessageId(this.message);
+    this.messageService.editMessage(this.message,newInput);
     this.toggleEdit();
   }
 

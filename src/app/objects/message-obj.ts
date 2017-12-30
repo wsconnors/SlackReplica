@@ -1,44 +1,24 @@
 export class MessageObj {
   private messageContent:string;
-  private messageId:number;
   private fromUser:string
-  private toChat:number;
-  private timeStamp:Date
+  private messageId:number;
+  private timeStamp:Date;
 
 
-
-  constructor(input:string){
-    this.messageContent = input;
-    this.messageId = MessageObj.generateId();
-    this.fromUser = ""; //Switch with more users
-    this.toChat = 0;
-    // this.time = new Date();
+  constructor(json:any){
+    this.messageContent = json.messageContent;
+    this.fromUser = json.userName;
+    this.messageId = json.messageId;
+    this.timeStamp = json.timeStamp;
   }
-  setMessage(newMessage:string){
-    this.messageContent = newMessage;
-  }
-  getMessage():string{
+
+  getMessageContent():string{
     return this.messageContent;
+  }
+  setMessageContent(newContent:string){
+    this.messageContent = newContent;
   }
   getMessageId():number{
     return this.messageId;
-  }
-  getUserId():string{
-    return this.fromUser;
-  }
-  getToChat():number{
-    return this.toChat
-  }
-  // getTime():Date{
-  //   return this.time
-  // }
-
-  // just for testing
-  setMessageId(id:number){
-    this.messageId = id;
-  }
-
-  private static generateId():number{
-    return new Date().getTime();
   }
 }

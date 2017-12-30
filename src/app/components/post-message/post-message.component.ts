@@ -1,7 +1,6 @@
-import { Component, OnInit, EventEmitter, Output, OnDestroy} from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, OnDestroy } from '@angular/core';
 import { MessageService } from '../../services/message.service';
 import { Subscription } from 'rxjs/Subscription';
-import { MessageObjects } from '../../data/data';
 
 @Component({
   selector: 'app-post-message',
@@ -9,12 +8,12 @@ import { MessageObjects } from '../../data/data';
   styleUrls: ['./post-message.component.css']
 })
 export class PostMessageComponent {
-  constructor(private messageService:MessageService){
+  constructor(private messageService: MessageService) {
   }
 
-  makePost(message:HTMLDataElement):void{
-    this.messageService.addMessage(message.value);
-    // MessageService.u
+  makePost(message: HTMLDataElement): void {
+    let fromUser = ""//addusername in
+    this.messageService.createMessage(message.value,fromUser);
     message.value = '';
   }
 

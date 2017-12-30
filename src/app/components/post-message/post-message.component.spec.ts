@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MessageService } from '../../services/message.service';
 import { MessageComponent } from '../message/message.component'
-import { PostMessage } from './post-message.component';
+import { PostMessageComponent } from './post-message.component';
 
 describe('PostMessage', () => {
-  let component: PostMessage;
-  let fixture: ComponentFixture<PostMessage>;
+  let component: PostMessageComponent;
+  let fixture: ComponentFixture<PostMessageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostMessage, MessageComponent ],
+      declarations: [ PostMessageComponent, MessageComponent ],
       providers: [MessageService ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PostMessage);
+    fixture = TestBed.createComponent(PostMessageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

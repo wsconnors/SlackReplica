@@ -9,7 +9,6 @@ describe('MessageComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MessageComponent ]
-      // providers: [MessageService]
     })
     .compileComponents();
   }));

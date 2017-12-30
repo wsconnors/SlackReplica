@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewChecked } from '@angular/core';
 import { MessageObj } from '../../objects/message-obj'
 import { MessageService } from '../../services/message.service'
 import { Observable } from 'rxjs';
@@ -12,25 +12,28 @@ export class MessageDisplayComponent implements OnInit{
   private loading: boolean = false;
   private messages:Observable<any[]>
 
-  // messageList:MessageObj[];
-
   constructor(private messageService:MessageService){
+  }
+
+  display(){
+
+  }
+
+  onDelete(){
+
   }
 
   ngOnInit(){
     this.updateMessages();
   }
 
+  // ngAfterViewChecked(){
+  //
+  // }
+
   updateMessages(){
     this.loading = true;
-    this.messages = this.messageService.getMessages();
-    // .subscribe(res => console.log("testing"+res));
-
-    // this.messageService.getMessages().debounceTime(400).distinctUntilChanged().subscribe(m=> this.messageList = m);
-    // this.messageService.getMessages().subscribe(data => {
-    //   this.messages = data;
-    //   // console.log(data)
-    // });
+    this.messages = this.messageService.getAllMessages();
   }
 
 

@@ -1,23 +1,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MessageDisplatComponent } from './message-display';
+import { MessageDisplayComponent } from './message-display';
 import {MessageService } from '../../services/message.service';
 import { MessageComponent } from '../message/message.component';
 
 describe('MessageDisplatComponent', () => {
-  let component: MessageDisplatComponent;
-  let fixture: ComponentFixture<MessageDisplatComponent>;
+  let component: MessageDisplayComponent;
+  let fixture: ComponentFixture<MessageDisplayComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MessageDisplatComponent, MessageComponent ],
+      declarations: [ MessageDisplayComponent, MessageComponent ],
       providers:[ MessageService ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MessageDisplatComponent);
+    fixture = TestBed.createComponent(MessageDisplayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

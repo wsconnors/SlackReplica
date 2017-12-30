@@ -3,7 +3,6 @@ export class Profile{
   private age:number;
   private email:string;
   private phoneNumber:number;
-  // private 
 
   constructor(){
     this.name ="";

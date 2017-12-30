@@ -1,22 +1,26 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { MessageDisplatComponent } from './components/message-display/message-display';
+import { MessageDisplayComponent } from './components/message-display/message-display';
 import { ActiveUsersComponent } from './components/active-users/active-users.component';
 import { PostMessageComponent } from './components/post-message/post-message.component';
 import { MessageService} from './services/message.service';
 import { MessageComponent } from './components/message/message.component';
+import { Http, Response,HttpModule,ConnectionBackEnd } from '@angular/http';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      providers:[ MessageService, Http,ConnectionBackEnd ],
       declarations: [
         AppComponent,
-        MessageDisplatComponent,
+        MessageDisplayComponent,
         ActiveUsersComponent,
         PostMessageComponent,
         MessageComponent
       ],
-      providers:[ MessageService ],
+
+      imports: [ HttpModule]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

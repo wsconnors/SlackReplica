@@ -9,15 +9,12 @@ export class User{
     this.password = password;
     this.profile = new Profile();
   }
-
   getUserName():string{
     return this.userName;
   }
   getPassword():string{
     return this.password;
   }
-
-
   setUserName(name:string):void{
     this.userName = name;
   }
